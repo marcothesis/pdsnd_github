@@ -34,7 +34,7 @@ def get_filters():
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
     days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
 
-    print('\nHello! Let\'s explore some US bikeshare data!')
+    print('\nWelcome! Let\'s explore some bikeshare data in the United States!')
 
     # get user input for city (chicago, new york city, washington).
     # HINT: Use a while loop to handle invalid inputs
@@ -204,17 +204,17 @@ def trip_duration_stats(df):
         day, hour = divmod(hour, 24)
         year, day = divmod(day, 365)
         return '{} years, {} days, {} hours, {} mins, {} secs'.format(year, day, hour, min, sec)
-    
+
     total_travel_time = df['Trip Duration'].sum()
     print('Total travel time:', ydhms(total_travel_time))
 
     # display mean travel time
     def readable_time(time):
         return str(datetime.timedelta(seconds = time))
-    
+
     mean_travel_time = df['Trip Duration'].mean()
     print('Mean travel time: {}'.format(readable_time(mean_travel_time)))
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -238,20 +238,20 @@ def user_stats(df):
         print('Gender:\n{}\n'.format(count_gender))
     else:
         print('There is no information on gender for this city.\n')
-        
+
     # Display earliest, most recent, and most common year of birth
     if 'Birth Year' in df.columns:
         earliest_birth = int(df['Birth Year'].min())
         print('Earliest year of birth: {}'.format(earliest_birth))
-        
+
         most_recent_birth = int(df['Birth Year'].max())
         print('Most recent year of birth: {}'.format(most_recent_birth))
-        
+
         most_common_birth = int(df['Birth Year'].mode()[0])
         print('Most common year of birth: {}'.format(most_common_birth))
     else:
         print('There is no information on year of birth for this city.\n')
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -262,7 +262,7 @@ def user_stats(df):
 def display_raw_data(df):
     see_more = input('\nDo you want to see some raw data? Enter yes or no.\n')
     show_rows = 0
-    
+
     while True:
         if see_more.lower() == 'yes':
             print()
@@ -299,4 +299,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
