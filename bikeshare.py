@@ -34,7 +34,7 @@ def get_filters():
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'all']
     days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
 
-    print('\nHello! Let\'s explore some US bikeshare data!')
+    print('\nWelcome! Let\'s explore some bikeshare data in the United States!')
 
     # get user input for city (chicago, new york city, washington).
     # HINT: Use a while loop to handle invalid inputs
@@ -140,7 +140,7 @@ def load_data(city, month, day):
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
-    print('\nCalculating The Most Frequent Times of Travel...\n')
+    print('\nCalculating the Most Popular Times of Travel...\n')
     start_time = time.time()
 
     # display the most common month
