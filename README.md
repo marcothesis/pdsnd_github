@@ -2,10 +2,34 @@
 January 13, 2021
 
 ### Project Title
-Explore US Bikeshare data :bike:
+Explore US Bikeshare data  :bike:
 
 ### Description
-Use Python :snake: to explore data related to bike share systems for three major cities in the United States -- _Chicago_, _New York City_, and _Washington_.
+Use Python  :snake:  to explore data related to bike share systems for three major cities in the United States -- _Chicago_, _New York City_, and _Washington_.
+
+The following are expected outputs from this project.
+
+* __Popular times of travel:__
+    * most common month
+    * most common day of week
+    * most common hour of day
+
+
+* __Popular stations and trip:__
+    * most common start station
+    * most common end station
+    * most common trip from start to end
+
+
+* __Trip duration:__
+    * total travel time
+    * average travel time
+
+
+* __User info:__
+    * counts of each user type
+    * counts of each gender (only for _NYC_ & _Chicago_)
+    * earliest, most recent, most common year of birth (only for _NYC_ & _Chicago_)
 
 ### Files used
 * bikeshare.py
